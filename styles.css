@@ -222,12 +222,18 @@ header {
     }
 
     .header-image {
-        height: 50vh;
+        /*height: 50vh;*/
+        /*width: 40px;*/
+        height: 40px;
+        /*margin-right: 10px;*/
     }
 
     .header-bottom {
         position: relative;
         background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
     }
 
     main {
@@ -241,13 +247,42 @@ header {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
+    .agent-info, .header-content, .social-share {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .agent-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .agent-info div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agent-info p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .header-content h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .social-share {
+        justify-content: flex-start;
+    }
 }
 
 /* 小型移动设备 */
 @media (max-width: 375px) {
-    .header-image {
+    /*.header-image {
         height: 40vh;
-    }
+    }*/
 
     .agent-info {
         flex-direction: column;
@@ -256,6 +291,26 @@ header {
 
     .agent-image {
         margin-bottom: 1rem;
+    }
+    .header-bottom {
+        padding: 0.25rem;
+    }
+
+    .agent-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .agent-info h3 {
+        font-size: 1rem;
+    }
+
+    .agent-info p {
+        font-size: 0.7rem;
+    }
+
+    .header-content h3 {
+        font-size: 1rem;
     }
 }
 
@@ -359,6 +414,8 @@ main p, main span, main li {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    max-height: 30%; /* 限制高度不超过30% */
+    overflow-y: auto; /* 如果内容超出,允许滚动 */
 }
 
 .agent-info {
@@ -418,6 +475,7 @@ main p, main span, main li {
 }
 
 /* 媒体查询 */
+
 @media (max-width: 768px) {
     #navbar ul {
         justify-content: space-around;
