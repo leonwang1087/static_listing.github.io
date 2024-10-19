@@ -135,185 +135,6 @@ header {
     right: 1rem;
 }
 
-/* 其他样式... */
-
-/* 响应式设计 
-@media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .header-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .agent-info {
-        margin-bottom: 1rem;
-    }
-
-    .photo-player img {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        background-size: 100% auto;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .header-content {
-        background-size: 100% auto;
-    }
-}
-
-@media (min-width: 1025px) {
-    .header-content {
-        background-size: cover;
-    }
-}
-*/
-/* 媒体查询 */
-/* 4K 分辨率 */
-@media (min-width: 3840px) {
-    .container {
-        max-width: 2560px;
-    }
-}
-
-/* 2K 分辨率 */
-@media (max-width: 2560px) {
-    .container {
-        max-width: 2048px;
-    }
-}
-
-/* 1080P 分辨率 */
-@media (max-width: 1920px) {
-    .container {
-        max-width: 1440px;
-    }
-}
-
-/* 平板和小型笔记本 */
-@media (max-width: 1024px) {
-    .header-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .agent-info, .header-content, .social-share {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-}
-
-/* 移动设备 */
-@media (max-width: 768px) {
-    #navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #navbar li {
-        margin: 0.5rem;
-    }
-
-    .header-image {
-        /*height: 50vh;*/
-        /*width: 40px;*/
-        height: 40px;
-        /*margin-right: 10px;*/
-    }
-
-    .header-bottom {
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.5rem;
-    }
-
-    main {
-        padding: 20px 5%;
-    }
-
-    .photo-player img {
-        height: 200px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .agent-info, .header-content, .social-share {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    .agent-info {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .agent-info div {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .agent-info p {
-        font-size: 0.8rem;
-        margin: 0;
-    }
-
-    .header-content h3 {
-        font-size: 1.2rem;
-        margin: 0.5rem 0;
-    }
-
-    .social-share {
-        justify-content: flex-start;
-    }
-}
-
-/* 小型移动设备 */
-@media (max-width: 375px) {
-    /*.header-image {
-        height: 40vh;
-    }*/
-
-    .agent-info {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .agent-image {
-        margin-bottom: 1rem;
-    }
-    .header-bottom {
-        padding: 0.25rem;
-    }
-
-    .agent-image {
-        width: 30px;
-        height: 30px;
-    }
-
-    .agent-info h3 {
-        font-size: 1rem;
-    }
-
-    .agent-info p {
-        font-size: 0.7rem;
-    }
-
-    .header-content h3 {
-        font-size: 1rem;
-    }
-}
-
 /* 添加以下样式 */
 
 /* 视频部分 */
@@ -497,3 +318,200 @@ main p, main span, main li {
         display: inline-block;
     }
 }
+
+/* 其他样式... */
+
+/* 响应式设计 
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agent-info {
+        margin-bottom: 1rem;
+    }
+
+    .photo-player img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        background-size: 100% auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-content {
+        background-size: 100% auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-content {
+        background-size: cover;
+    }
+}
+*/
+/* 媒体查询 */
+/* 4K 分辨率 */
+@media (min-width: 3840px) {
+    .container {
+        max-width: 2560px;
+    }
+}
+
+/* 2K 分辨率 */
+@media (max-width: 2560px) {
+    .container {
+        max-width: 2048px;
+    }
+}
+
+/* 1080P 分辨率 */
+@media (max-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* 平板和小型笔记本 */
+@media (max-width: 1024px) {
+    .header-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agent-info, .header-content, .social-share {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 移动设备 */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navbar li {
+        margin: 0.5rem;
+    }
+
+    .header-image {
+        /*height: 50vh;*/
+        /*width: 40px;*/
+        height: 100%;
+        /*margin-right: 10px;*/
+    }
+
+    .header-bottom {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        align-items: start;
+        padding: 0.5rem;
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 20px 5%;
+    }
+
+    .photo-player img {
+        height: 200px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .agent-info, .header-content, .social-share {
+        width: 30%;
+        margin-bottom: 0.5rem;
+    }
+
+    .agent-info {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .agent-image {
+        width: 40px;
+        height: 40px;
+        /*margin-right: 10px;*/
+        align-items: start;
+    }
+
+    .agent-info div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .agent-info p {
+        font-size: 0.8rem;
+        margin: 0;
+        text-align: left;
+    }
+
+    .header-content {
+        text-align: left;
+        width: 100%;
+    }
+    .header-content h3 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .social-share {
+        justify-content: flex-start;
+    }
+}
+
+/* 小型移动设备 */
+@media (max-width: 375px) {
+    /*.header-image {
+        height: 40vh;
+    }*/
+
+    .agent-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .agent-image {
+        margin-bottom: 1rem;
+    }
+    .header-bottom {
+        padding: 0.25rem;
+    }
+
+    .agent-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .agent-info h3 {
+        font-size: 1rem;
+    }
+
+    .agent-info p {
+        font-size: 0.7rem;
+    }
+
+    .header-content h3 {
+        font-size: 1rem;
+    }
+}
+
+
