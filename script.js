@@ -68,15 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 社交分享功能
 function shareFacebook() {
-    // 实现Facebook分享逻辑
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${title}`, '_blank');
 }
 
 function shareTwitter() {
-    // 实现Twitter分享逻辑
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank');
 }
 
 function shareInstagram() {
-    // 实现Instagram分享逻辑
+    alert('Instagram不支持直接分享链接。请截图并在Instagram应用中分享。');
 }
 
 // 为社交分享按钮添加事件监听器
@@ -109,3 +113,131 @@ function initMap() {
         title: "15315 Santella Court Rancho Peñasquitos, San Diego, CA"
     });
 }
+
+// 语言数据
+const languages = {
+    'zh': {
+        'info': '信息',
+        'photoPlayer': '照片播放器',
+        'details': '详情',
+        'video': '视频',
+        'gallery': '图库',
+        'contact': '联系',
+        'map': '地图',
+        'title': '15315 Santella Court Rancho Peñasquitos, San Diego, CA',
+        'agentName': 'John Doe',
+        'agentTitle': '房地产代理人',
+        'propertyInfo': '欢迎来到这栋位于备受欢迎的Rancho Peñasquitos社区的令人惊叹的4卧3卫房屋。这处精心维护的房产提供宽敞的平面布局、更新的厨房和一个适合娱乐的大后院。',
+        'bedrooms': '4 卧室',
+        'bathrooms': '3 浴室',
+        'area': '2,553 平方英尺',
+        'features': [
+            '更新的厨房配有不锈钢电器',
+            '带步入式柜的大型主卧套房',
+            '带露台区的宽敞后院',
+            '双车库',
+            '靠近优秀的学校和物中心'
+        ],
+        'sendMessage': '发送消息',
+        'photoPlayerTitle': '照片播放器',
+        'propertyDetailsTitle': '房产详情',
+        'featuresTitle': '特色',
+        'propertyVideoTitle': '房产视频',
+        'photoGalleryTitle': '照片图库',
+        'contactAgentTitle': '联系代理人',
+        'locationTitle': '位置',
+        'namePlaceholder': '您的姓名',
+        'emailPlaceholder': '您的电子邮箱',
+        'phonePlaceholder': '您的电话',
+        'messagePlaceholder': '留言',
+        'subtitle': 'Rancho Peñasquitos, San Diego, CA',
+        'agentcompany': '房地产公司',
+        'agentphone': '电话: 123-456-7890',
+        'agentemail': '电子邮件: john.doe@example.com',
+        'agentlicence': '执照号: 020222222',
+        'price': '¥1,599,000',
+        'address': '15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129'
+    },
+    'en': {
+        'info': 'Info',
+        'photoPlayer': 'Photo Player',
+        'details': 'Details',
+        'video': 'Video',
+        'gallery': 'Gallery',
+        'contact': 'Contact',
+        'map': 'Map',
+        'title': '15315 Santella Court Rancho Peñasquitos, San Diego, CA',
+        'agentName': 'John Doe',
+        'agentTitle': 'Real Estate Agent',
+        'propertyInfo': 'Welcome to this stunning 4-bedroom, 3-bathroom home located in the highly sought-after Rancho Peñasquitos community. This well-maintained property offers a spacious floor plan, updated kitchen, and a large backyard perfect for entertaining.',
+        'bedrooms': '4 Bedrooms',
+        'bathrooms': '3 Bathrooms',
+        'area': '2,553 sq ft',
+        'features': [
+            'Updated kitchen with stainless steel appliances',
+            'Large master suite with walk-in closet',
+            'Spacious backyard with patio area',
+            'Two-car garage',
+            'Close to excellent schools and shopping centers'
+        ],
+        'sendMessage': 'Send Message',
+        'photoPlayerTitle': 'Photo Player',
+        'propertyDetailsTitle': 'Property Details',
+        'featuresTitle': 'Features',
+        'propertyVideoTitle': 'Property Video',
+        'photoGalleryTitle': 'Photo Gallery',
+        'contactAgentTitle': 'Contact Agent',
+        'locationTitle': 'Location',
+        'namePlaceholder': 'Your Name',
+        'emailPlaceholder': 'Your Email',
+        'phonePlaceholder': 'Your Phone',
+        'messagePlaceholder': 'Message',
+        'subtitle': 'Rancho Peñasquitos, San Diego, CA',
+        'agentcompany': 'Real Estate Company',
+        'agentphone': 'Phone: 123-456-7890',
+        'agentemail': 'Email: john.doe@example.com',
+        'agentlicence': 'License: 020222222',
+        'price': '$1,599,000',
+        'address': '15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129'
+    }
+};
+
+let currentLanguage = 'zh';
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+    updateLanguage();
+    document.getElementById('languageToggle').textContent = currentLanguage === 'zh' ? 'EN' : '中文';
+}
+
+function updateLanguage() {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (languages[currentLanguage][key]) {
+            element.textContent = languages[currentLanguage][key];
+        }
+    });
+
+    const placeholders = document.querySelectorAll('[data-translate-placeholder]');
+    placeholders.forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (languages[currentLanguage][key]) {
+            element.placeholder = languages[currentLanguage][key];
+        }
+    });
+
+    // 更新特色列表
+    const featuresList = document.querySelector('#details ul');
+    featuresList.innerHTML = '';
+    languages[currentLanguage].features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+    });
+}
+
+// 在页面加载完成后初始化语言
+document.addEventListener('DOMContentLoaded', () => {
+    updateLanguage();
+});

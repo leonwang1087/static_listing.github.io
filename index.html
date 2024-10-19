@@ -11,28 +11,74 @@
     <div class="container">
         <nav id="navbar">
             <ul>
-                <li><button onclick="scrollToSection('info')">信息</button></li>
-                <li><button onclick="scrollToSection('photoPlayer')">照片播放器</button></li>
-                <li><button onclick="scrollToSection('details')">详情</button></li>
-                <li><button onclick="scrollToSection('video')">视频</button></li>
-                <li><button onclick="scrollToSection('gallery')">图库</button></li>
-                <li><button onclick="scrollToSection('contact')">联系</button></li>
-                <li><button onclick="scrollToSection('map')">地图</button></li>
+                <li>
+                    <button onclick="scrollToSection('info')">
+                        <span class="nav-text" data-translate="info">信息</span>
+                        <i class="nav-icon" data-lucide="info"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('photoPlayer')">
+                        <span class="nav-text" data-translate="photoPlayer">照片播放器</span>
+                        <i class="nav-icon" data-lucide="image"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('details')">
+                        <span class="nav-text" data-translate="details">详情</span>
+                        <i class="nav-icon" data-lucide="list"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('video')">
+                        <span class="nav-text" data-translate="video">视频</span>
+                        <i class="nav-icon" data-lucide="video"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('gallery')">
+                        <span class="nav-text" data-translate="gallery">图库</span>
+                        <i class="nav-icon" data-lucide="image"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('contact')">
+                        <span class="nav-text" data-translate="contact">联系</span>
+                        <i class="nav-icon" data-lucide="mail"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('map')">
+                        <span class="nav-text" data-translate="map">地图</span>
+                        <i class="nav-icon" data-lucide="map-pin"></i>
+                    </button>
+                </li>
+                <li>
+                    <button id="languageToggle" onclick="toggleLanguage()">
+                        <span class="nav-text">EN</span>
+                        <i class="nav-icon" data-lucide="globe"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
 
         <header>
-            <div class="header-content">
-                <div class="header-overlay"></div>
-                <h1>  Address, CA</h1>
-            </div>
+            <div class="header-image"></div>
             <div class="header-bottom">
                 <div class="agent-info">
                     <img src="statics/images/IMG_9325.jpg" alt="代理人" class="agent-image">
                     <div>
-                        <h3>John Doe</h3>
-                        <p>房地产代理人</p>
+                        <h3 data-translate="agentName">John Doe</h3>
+                        <p data-translate="agentTitle">房地产代理人</p>
+                        <p data-translate="agentcompany">房地产公司</p>
+                        <p data-translate="agentphone">电话: 123-456-7890</p>
+                        <p data-translate="agentemail">电子邮件: john.doe@example.com</p>
+                        <p data-translate="agentlicence">license: 020222222</p>
                     </div>
+                </div>
+                <div class="header-content">
+                    <h3 data-translate="title">15315 Santella Court</h1>
+                    <h3 data-translate="subtitle">Rancho Peñasquitos, San Diego, CA</h2>
                 </div>
                 <div class="social-share">
                     <button aria-label="在Facebook上分享"><i data-lucide="facebook"></i></button>
@@ -44,12 +90,12 @@
 
         <main>
             <section id="info">
-                <h2>房产信息</h2>
-                <p>欢迎来到这栋位于备受欢迎的社区的令人惊叹的4卧3卫房屋。这处精心维护的房产提供宽敞的平面布局、更新的厨房和一个适合娱乐的大后院。</p>
+                <h2 data-translate="info">房产信息</h2>
+                <p data-translate="propertyInfo">欢迎来到这栋位于备受欢迎的Rancho Peñasquitos社区的令人惊叹的4卧3卫房屋。这处精心维护的房产提供宽敞的平面布局、更新的厨房和一个适合娱乐的大后院。</p>
             </section>
 
             <section id="photoPlayer">
-                <h2>照片播放器</h2>
+                <h2 data-translate="photoPlayerTitle">照片播放器</h2>
                 <div class="photo-player">
                     <img id="currentImage" src="statics/images/IMG_9308.jpg" alt="房产图片">
                     <button onclick="prevImage()" class="prev-button" aria-label="上一张图片"><i data-lucide="chevron-left"></i></button>
@@ -58,19 +104,19 @@
             </section>
 
             <section id="details">
-                <h2>房产详情</h2>
+                <h2 data-translate="propertyDetailsTitle">房产详情</h2>
                 <div class="property-details">
-                    <h3>$000000000</h3>
+                    <h3>$1,599,000</h3>
                     <div class="address">
                         <i data-lucide="map-pin"></i>
-                        <span>Addressssssssss!!!!!!!!</span>
+                        <span>15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129</span>
                     </div>
                     <div class="features">
-                        <div><i data-lucide="bed"></i> <span>4 卧室</span></div>
-                        <div><i data-lucide="bath"></i> <span>3 浴室</span></div>
-                        <div><i data-lucide="ruler"></i> <span>2,553 平方英尺</span></div>
+                        <div><i data-lucide="bed"></i> <span data-translate="bedrooms">4 卧室</span></div>
+                        <div><i data-lucide="bath"></i> <span data-translate="bathrooms">3 浴室</span></div>
+                        <div><i data-lucide="ruler"></i> <span data-translate="area">2,553 平方英尺</span></div>
                     </div>
-                    <h4>特色</h4>
+                    <h4 data-translate="featuresTitle">特色</h4>
                     <ul>
                         <li>更新的厨房配有不锈钢电器</li>
                         <li>带步入式柜的大型主卧套房</li>
@@ -82,14 +128,14 @@
             </section>
 
             <section id="video">
-                <h2>房产视频</h2>
+                <h2 data-translate="propertyVideoTitle">房产视频</h2>
                 <div class="video-container">
                     <span>视频占位符</span>
                 </div>
             </section>
 
             <section id="gallery">
-                <h2>照片图库</h2>
+                <h2 data-translate="photoGalleryTitle">照片图库</h2>
                 <div class="gallery-grid">
                     <img src="statics/images/IMG_9308.jpg" alt="图库图片 1">
                     <img src="statics/images/IMG_9310.jpg" alt="图库图片 2">
@@ -101,20 +147,20 @@
             </section>
 
             <section id="contact">
-                <h2>联系代理人</h2>
+                <h2 data-translate="contactAgentTitle">联系代理人</h2>
                 <div class="contact-form">
                     <form id="contactForm" action="mailto:haochen@gmail.com" method="post" enctype="text/plain">
-                        <input type="text" name="name" placeholder="您的姓名" required>
-                        <input type="email" name="email" placeholder="您的电子邮箱" required>
-                        <input type="tel" name="phone" placeholder="您的电话" required>
-                        <textarea name="message" placeholder="留言" rows="4" required></textarea>
-                        <button type="submit">发送消息</button>
+                        <input type="text" name="name" data-translate-placeholder="namePlaceholder" placeholder="您的姓名" required>
+                        <input type="email" name="email" data-translate-placeholder="emailPlaceholder" placeholder="您的电子邮箱" required>
+                        <input type="tel" name="phone" data-translate-placeholder="phonePlaceholder" placeholder="您的电话" required>
+                        <textarea name="message" data-translate-placeholder="messagePlaceholder" placeholder="留言" rows="4" required></textarea>
+                        <button type="submit" data-translate="sendMessage">发送消息</button>
                     </form>
                 </div>
             </section>
 
             <section id="map">
-                <h2>位置</h2>
+                <h2 data-translate="locationTitle">位置</h2>
                 <div id="map-container" class="map-container"></div>
             </section>
         </main>
