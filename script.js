@@ -62,8 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
-    updateImage();
+    // 初始化Lucide图标
     lucide.createIcons();
+
+    updateImage();
+    updateLanguage();
 });
 
 // 社交分享功能
@@ -96,21 +99,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 添加到现有的script.js文件中
 
-function initMap() {
-    // 房产的经纬度坐标
-    const propertyLocation = { lat: 32.9631, lng: -117.1261 }; // 这是San Diego的大致坐标,请替换为实际地址的坐标
+// 全局变量来跟踪Google Maps API的加载状态
+let googleMapsLoaded = false;
 
-    // 创建地图
-    const map = new google.maps.Map(document.getElementById("map-container"), {
-        zoom: 15,
-        center: propertyLocation,
+// 动态加载Google Maps API
+function loadGoogleMapsAPI() {
+    if (window.google && window.google.maps) {
+        return Promise.resolve();
+    }
+
+    return new Promise((resolve, reject) => {
+        window.initMap = function() {
+            resolve();
+        };
+
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        script.onerror = reject;
+        document.head.appendChild(script);
     });
+}
 
-    // 在地图上添加标记
-    const marker = new google.maps.Marker({
-        position: propertyLocation,
+// 初始化地图
+function initializeMap() {
+    const mapOptions = {
+        center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE },
+        zoom: 14
+    };
+    const map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
+    
+    // 添加标记
+    new google.maps.Marker({
+        position: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE },
         map: map,
-        title: "15315 Santella Court Rancho Peñasquitos, San Diego, CA"
+        title: '房产位置'
     });
 }
 
@@ -227,15 +251,28 @@ function updateLanguage() {
 
     // 更新特色列表
     const featuresList = document.querySelector('#details ul');
-    featuresList.innerHTML = '';
-    languages[currentLanguage].features.forEach(feature => {
-        const li = document.createElement('li');
-        li.textContent = feature;
-        featuresList.appendChild(li);
-    });
+    if (featuresList) { // 添加这个检查
+        featuresList.innerHTML = '';
+        languages[currentLanguage].features.forEach(feature => {
+            const li = document.createElement('li');
+            li.textContent = feature;
+            featuresList.appendChild(li);
+        });
+    }
 }
 
-// 在页面加载完成后初始化语言
+// 在页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
+    // 初始化Lucide图标
+    lucide.createIcons();
+
+    // 初始化语言
     updateLanguage();
+
+    // 加载Google Maps API并初始化地图
+    loadGoogleMapsAPI().then(() => {
+        initializeMap();
+    }).catch(error => {
+        console.error('Failed to load Google Maps API:', error);
+    });
 });

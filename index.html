@@ -6,6 +6,7 @@
     <title>房地产页面</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -105,25 +106,63 @@
             <section id="details">
                 <h2 data-translate="propertyDetailsTitle">房产详情</h2>
                 <div class="property-details">
-                    <h3>$1,599,000</h3>
-                    <div class="address">
-                        <i data-lucide="map-pin"></i>
-                        <span>15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129</span>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/price_tag.svg" alt="tag">
+                        <span>LIST PRICE</span>
+                        <strong>$6,895,000</strong>
                     </div>
-                    <div class="features">
-                        <div><i data-lucide="bed"></i> <span data-translate="bedrooms">4 卧室</span></div>
-                        <div><i data-lucide="bath"></i> <span data-translate="bathrooms">3 浴室</span></div>
-                        <div><i data-lucide="ruler"></i> <span data-translate="area">2,553 平方英尺</span></div>
+                    <div class="detail-item">
+                       <img src="statics/images/icons/book.svg" alt="tag">
+                        <span>MLS NUMBER</span>
+                        <strong>ML81983140</strong>
                     </div>
-                    <h4 data-translate="featuresTitle">特色</h4>
-                    <ul>
-                        <li>更新的厨房配有不锈钢电器</li>
-                        <li>带步入式柜的大型主卧套房</li>
-                        <li>带露台区的宽敞后院</li>
-                        <li>双车库</li>
-                        <li>靠近优秀的学校和物中心</li>
-                    </ul>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/bed.svg" alt="tag">
+                        <span>BEDS</span>
+                        <strong>5</strong>
+                    </div>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/bath.svg" alt="tag">
+                        <span>BATHS</span>
+                        <strong>6.5</strong>
+                    </div>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/car.svg" alt="tag">
+                        <span>CAR GARAGE</span>
+                        <strong>3</strong>
+                    </div>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/ruler.svg" alt="tag">
+                        <span>SQUARE FEET</span>
+                        <strong>6,194</strong>
+                    </div>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/calendar.svg" alt="tag">
+                        <span>YEAR BUILT</span>
+                        <strong>2014</strong>
+                    </div>
+                    <div class="detail-item">
+                        <img src="statics/images/icons/size.svg" alt="tag">
+                        <span>LOT SIZE</span>
+                        <strong>74923</strong>
+                    </div>
                 </div>
+                <hr/>
+                <!-- 新添加的无序列表 -->
+                <ul class="feature-list">
+                    <!----
+                    <div><img src="statics/images/icons/check.png" alt="check"><li>更新的厨房配有不锈钢电器</li></div>
+                    <div><img src="statics/images/icons/check.png" alt="check"><li>带步入式衣柜的大型主卧套房</li></div>
+                    <div><img src="statics/images/icons/check.png" alt="check"><li>带露台区的宽敞后院</li></div>
+                    <div><img src="statics/images/icons/check.png" alt="check"><li>双车库</li></div>
+                    <div><img src="statics/images/icons/check.png" alt="check"><li>靠近优秀的学校和购物中心</li></div>
+                -->
+                    <li>更新的厨房配有不锈钢电器</li>
+                    <li>带步入式衣柜的大型主卧套房</li>
+                    <li>带露台区的宽敞后院</li>
+                    <li>双车库</li>
+                    <li>靠近优秀的学校和购物中心</li>
+                </ul>
             </section>
 
             <section id="video">
@@ -165,7 +204,14 @@
         </main>
     </div>
     <script src="script.js"></script>
-    <!-- 在</body>标签之前添加以下代码 -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+
 </body>
+<footer>
+    <div class="footer-content">
+        <img src="path/to/equal-housing-opportunity-logo.png" alt="Equal Housing Opportunity" class="eho-logo">
+        <p>Proudly created by Beyond RE Marketing / Chris Ricketts</p>
+        <p>All information deemed reliable but not guaranteed. | © 2024 Beyond RE Marketing, Inc — All rights reserved. | Use of this website is subject to our terms of use.</p>
+    </div>
+</footer>
 </html>

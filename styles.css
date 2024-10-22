@@ -16,7 +16,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
     min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@ body {
     right: 0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem 0;
+    padding: 0.3rem 0;
     transition: background-color 0.3s;
 }
 
@@ -107,6 +107,19 @@ header {
 /* 照片播放器样式 */
 .photo-player {
     position: relative;
+    /*width: 100%;
+    margin-bottom: 2rem;
+    */
+}
+
+#details ul {
+    margin-block-end: 0px;
+    padding: 10px;
+}
+
+#details img {
+    width: 50px;
+    height: 50px;
 }
 
 .photo-player img {
@@ -135,11 +148,14 @@ header {
     right: 1rem;
 }
 
-/* 添加以下样式 */
+#feature-list ul {
+    list-style-image: url('statics/images/icons/check.svg');
+    list-style-type: square;
+}
 
 /* 视频部分 */
 .video-container {
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;*/
     height: 400px;
     display: flex;
     justify-content: center;
@@ -194,18 +210,20 @@ header {
 
 /* 地图部分 */
 .map-container {
-    height: 400px;
+    height: 800px;
     width: 95%;
+    margin-left: 50px;
 }
 
 /* 确保所有部分都有足够的间距 */
 section {
     margin-bottom: 4rem;
+    margin: 0 auto;
 }
 main {
-    background-color: rgba(65, 143, 222, 0.6);
+    /*background-color: rgba(65, 143, 222, 0.6);*/
     /*padding: 30px 5%;*/
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -214,12 +232,19 @@ main {
 main h2 {
     text-align: center;
     margin-bottom: 20px;
+    padding: 14px;
+    margin-block-start: 0px;
+    margin-block-end:  0px;
 }
 
 main p, main span, main li {
     text-align: left;
-    margin: 0 30px;
+    margin: 0 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: left;
 }
+
 
 .property-details, .photo-player, .video-container, .gallery-grid, .contact-form, .map-container {
     margin: 0 30px;
@@ -295,30 +320,36 @@ main p, main span, main li {
     background-position: center;
 }
 
-/* 媒体查询 */
-
-@media (max-width: 768px) {
-    #navbar ul {
-        justify-content: space-around;
-    }
-
-    #navbar li {
-        margin: 0;
-    }
-
-    #navbar button {
-        padding: 0.5rem;
-    }
-
-    .nav-text {
-        display: none;
-    }
-
-    .nav-icon {
-        display: inline-block;
-    }
+#info {
+    background-color: rgba(65, 143, 222, 0.6);
 }
 
+
+#details {
+    background-color: rgba(65, 143, 222, 0.6);
+}
+
+#contact {
+    background-color: rgba(65, 143, 222, 0.6);
+}
+
+#photoPlayer {
+    background-color: rgba(65, 143, 222, 0.3);
+}
+
+#video {
+    background-color: rgba(65, 143, 222, 0.3);
+}
+
+#gallery {
+    background-color: rgba(65, 143, 222, 0.3);
+}
+
+#map h2 {
+    background-color: rgba(65, 143, 222, 0.3);
+}
+
+/* 媒体查询 */
 /* 其他样式... */
 
 /* 响应式设计 
@@ -369,16 +400,20 @@ main p, main span, main li {
 
 /* 2K 分辨率 */
 @media (max-width: 2560px) {
+    /*
     .container {
         max-width: 2048px;
-    }
+        
+    }*/
 }
 
 /* 1080P 分辨率 */
 @media (max-width: 1920px) {
+    /*
     .container {
         max-width: 1440px;
     }
+        */
 }
 
 /* 平板和小型笔记本 */
@@ -405,6 +440,24 @@ main p, main span, main li {
         margin: 0.5rem;
     }
 
+    #navbar button {
+        padding: 0.5rem;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-icon {
+        display: inline-block;
+    }
+
+    #navbar li:nth-child(2),
+    #navbar li:nth-child(5),
+    #navbar li:nth-child(7) {
+        display: none;
+    }
+
     .header-image {
         /*height: 50vh;*/
         /*width: 40px;*/
@@ -421,8 +474,9 @@ main p, main span, main li {
         justify-content: space-between;
     }
 
-    main {
-        padding: 20px 5%;
+    
+    main p, main span, main li {
+        max-width: 100%;
     }
 
     .photo-player img {
@@ -431,6 +485,10 @@ main p, main span, main li {
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .map-container {
+        margin-left: 10px;
     }
 
     .agent-info, .header-content, .social-share {
@@ -476,6 +534,15 @@ main p, main span, main li {
     .social-share {
         justify-content: flex-start;
     }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    #details img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 /* 小型移动设备 */
@@ -483,6 +550,18 @@ main p, main span, main li {
     /*.header-image {
         height: 40vh;
     }*/
+
+    #navbar li {
+        display: block !important;
+    }
+
+    .nav-text {
+        display: inline-block;
+    }
+
+    .nav-icon {
+        display: none;
+    }
 
     .agent-info {
         flex-direction: column;
@@ -512,6 +591,84 @@ main p, main span, main li {
     .header-content h3 {
         font-size: 1rem;
     }
+
+    #details img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 
+
+
+/* 页脚样式 */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.eho-logo {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+.property-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 50%;
+    align-content: center;
+    justify-content: center;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.detail-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.detail-item span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail-item strong {
+    font-size: 18px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .property-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
