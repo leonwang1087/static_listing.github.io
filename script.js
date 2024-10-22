@@ -192,7 +192,7 @@ const languages = {
         'title': 'ADDRESSSSSSSSSSSSSSSSSSSSSSSSS',
         'agentName': 'John Doe',
         'agentTitle': 'Real Estate Agent',
-        'propertyInfo': 'Welcome to this stunning 4-bedroom, 3-bathroom home located in the highly sought-after Rancho Peñasquitos community. This well-maintained property offers a spacious floor plan, updated kitchen, and a large backyard perfect for entertaining.',
+        'propertyInfo': 'Welcome to this stunning 4-bedroom, 3-bathroom home located in the highly sought-after. This well-maintained property offers a spacious floor plan, updated kitchen, and a large backyard perfect for entertaining.',
         'bedrooms': '4 Bedrooms',
         'bathrooms': '3 Bathrooms',
         'area': '2,553 sq ft',
