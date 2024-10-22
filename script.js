@@ -148,10 +148,10 @@ const languages = {
         'gallery': '图库',
         'contact': '联系',
         'map': '地图',
-        'title': '15315 Santella Court Rancho Peñasquitos, San Diego, CA',
+        'title': 'ADRESSSSSSSSSSSSSSSSSSSSSSSS',
         'agentName': 'John Doe',
         'agentTitle': '房地产代理人',
-        'propertyInfo': '欢迎来到这栋位于备受欢迎的Rancho Peñasquitos社区的令人惊叹的4卧3卫房屋。这处精心维护的房产提供宽敞的平面布局、更新的厨房和一个适合娱乐的大后院。',
+        'propertyInfo': '欢迎来到这栋位于备受欢迎的的令人惊叹的4卧3卫房屋。这处精心维护的房产提供宽敞的平面布局、更新的厨房和一个适合娱乐的大后院。',
         'bedrooms': '4 卧室',
         'bathrooms': '3 浴室',
         'area': '2,553 平方英尺',
@@ -178,8 +178,8 @@ const languages = {
         'agentphone': '电话: 123-456-7890',
         'agentemail': '电子邮件: john.doe@example.com',
         'agentlicence': '执照号: 020222222',
-        'price': '¥1,599,000',
-        'address': '15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129'
+        'price': '¥$$$$$$$$$$$$$$$$$$$$$$$$$',
+        'address': 'ADDRESSSSSSSSSSSSSSSSSSSSSS'
     },
     'en': {
         'info': 'Info',
@@ -189,7 +189,7 @@ const languages = {
         'gallery': 'Gallery',
         'contact': 'Contact',
         'map': 'Map',
-        'title': '15315 Santella Court Rancho Peñasquitos, San Diego, CA',
+        'title': 'ADDRESSSSSSSSSSSSSSSSSSSSSSSSS',
         'agentName': 'John Doe',
         'agentTitle': 'Real Estate Agent',
         'propertyInfo': 'Welcome to this stunning 4-bedroom, 3-bathroom home located in the highly sought-after Rancho Peñasquitos community. This well-maintained property offers a spacious floor plan, updated kitchen, and a large backyard perfect for entertaining.',
@@ -219,8 +219,8 @@ const languages = {
         'agentphone': 'Phone: 123-456-7890',
         'agentemail': 'Email: john.doe@example.com',
         'agentlicence': 'License: 020222222',
-        'price': '$1,599,000',
-        'address': '15315 Santella Court, Rancho Peñasquitos, San Diego, CA 92129'
+        'price': '$$$$$$$$$$$$$$$$$$$$$$$$',
+        'address': 'ADDRESSSSSSSSSSSSSSSSSSSSSSSS'
     }
 };
 
